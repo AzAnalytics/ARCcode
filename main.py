@@ -50,7 +50,7 @@ def main():
     predictions = generate_predictions(model, test_loader)
 
     # Écrire les prédictions au format JSON requis
-    submission_file_path = 'sample_submission.json'
+    submission_file_path = 'submission.json'
     write_predictions_to_json(predictions, submission_file_path)
     print(f"Prédictions écrites dans le fichier {submission_file_path}.")
 
@@ -58,7 +58,7 @@ def main():
     if os.path.exists(submission_file_path):
         with open(submission_file_path, 'r') as file:
             sample_submission = json.load(file)
-            print("\nAperçu du fichier sample_submission.json:")
+            print("\nAperçu du fichier submission.json:")
             print(json.dumps(sample_submission, indent=4)[:500])  # Afficher les 500 premiers caractères
 
 

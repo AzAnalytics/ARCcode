@@ -47,12 +47,12 @@ if __name__ == "__main__":
     predictions = generate_predictions(model, test_loader)
 
     # Écrire les prédictions dans un fichier JSON avec un format compact
-    submission_file_path = 'sample_submission.json'
+    submission_file_path = 'submission.json'
     write_predictions_to_json(predictions, submission_file_path)
     print(f"Prédictions écrites dans le fichier {submission_file_path}.")
 
     # Afficher un aperçu du fichier de soumission
     with open(submission_file_path, 'r') as file:
         compact_json = file.read()
-        print("\nAperçu du fichier sample_submission.json:")
+        print("\nAperçu du fichier submission.json:")
         print(compact_json[:500])  # Afficher les 500 premiers caractères
